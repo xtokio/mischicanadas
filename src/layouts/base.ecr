@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mis Chicanadas</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/mischicanadas/img/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/mischicanadas/css/docs.css">
+    <link rel="stylesheet" href="/assets/mischicanadas/css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81631455-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-81631455-2');
+    </script>
+
+  </head>
+  <body class="body">
+    <div id="app">
+      <header class="header">              
+          <div class="site-content">
+              <h1 class="site-content__headline"><a href="/"><span class="mis">Mis</span> <span class="chicanadas">Chicanadas</span></a></h1>
+              <a href="/proyectos" class="menu_bar">Proyectos</a>
+              <a href="#" onclick="filter_icon_active('.fa-th-large')"> <img src="/assets/mischicanadas/img/th_large_solid.svg" class="svg-inline--fa fa-th-large fa-w-16"/> </a>
+              <a href="#" onclick="filter_icon_active('.fa-th-list')"> <img src="/assets/mischicanadas/img/th_list_solid.svg"/ class="svg-inline--fa fa-th-list fa-w-16"> </a>
+          </div>
+      </header>
+      <div class="container">        
+        <%= content %>
+      </div>
+
+    </div>
+    <script src="/assets/mischicanadas/js/domready.js"></script>
+    <script src="/assets/mischicanadas/js/jquery.js"></script>
+    <script src="/assets/mischicanadas/js/prism.js"></script>
+    <script>
+      domready(function(){
+        let icon = localStorage.getItem('filter_icon');
+        if(icon != null)
+        {
+          $(".fa-th-large").removeClass("fa_icon_active");
+          $(".fa-th-list").removeClass("fa_icon_active");
+
+          $(icon).toggleClass("fa_icon_active");
+          let elements = document.querySelectorAll(".filter_active");
+
+          if(icon == ".fa-th-list")
+            for (var i = 0; i< elements.length; i++)
+              elements[i].classList.add("display-none")
+          else
+            for (var i = 0; i< elements.length; i++)
+              elements[i].classList.remove("display-none")
+        }
+
+      });
+
+      function filter_icon_active(icon)
+      {
+        localStorage.setItem('filter_icon',icon);
+
+        $(".fa-th-large").removeClass("fa_icon_active");
+        $(".fa-th-list").removeClass("fa_icon_active");
+
+        $(icon).toggleClass("fa_icon_active");
+        let elements = document.querySelectorAll(".filter_active");
+
+        if(icon == ".fa-th-list")
+          for (var i = 0; i< elements.length; i++)
+            elements[i].classList.add("display-none")
+        else
+          for (var i = 0; i< elements.length; i++)
+            elements[i].classList.remove("display-none")
+      }
+    </script>
+  </body>
+</html>

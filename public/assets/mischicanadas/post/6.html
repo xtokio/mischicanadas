@@ -1,0 +1,91 @@
+<p>
+    Para crear nuestra primera pagina web vamos a utilizar un framework llamado Kemal 
+    que nos servira para hacer este proceso mas rapido.
+</p>
+<h3>Creamos nuestro proyecto en Crystal</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          crystal init app simple
+        </code>
+    </pre>
+</figure>
+<p>
+  Esto nos generara un folder con el nombre de nuestro proyecto que en este caso es simple
+</p>
+
+<h3>Entramos al directorio de nuestro proyecto</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          cd simple
+        </code>
+    </pre>
+</figure>
+
+<h3>Agregamos al archivo shard.yml la libreria de Kemal</h3>
+<figure class="highlight">
+    <pre class="language-yaml">
+        <code>
+          dependencies:
+            kemal:
+              github: kemalcr/kemal
+        </code>
+    </pre>
+</figure>
+
+<h3>Instalamos la nueva libreria</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          shards install
+        </code>
+    </pre>
+</figure>
+
+<h3>Codigo</h3>
+<p>
+  Ahora editamos el archivo que 
+  se encuentra en el folder src que en nuestro caso se llama simple.cr y agregamos el siguiente codigo
+</p>
+<figure class="highlight">
+    <pre class="language-ruby">
+        <code>
+            # TODO: Write documentation for `Simple`
+            require "kemal"
+            
+            module Simple
+              VERSION = "0.1.0"
+            
+              # TODO: Put your code here
+              get "/" do |env|
+                "Hola Mundo web!"
+              end
+            
+              get "/hola/:nombre" do |env|
+                nombre = env.params.url["nombre"]
+                "Hola #{nombre}, como estas?"
+              end
+            
+            end
+            Kemal.run
+        </code>
+    </pre>
+</figure>
+
+<h3>Ejecutamos nuestro proyecto</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          crystal run src/simple.cr
+        </code>
+    </pre>
+</figure>
+
+<p>
+  Ir al link http://localhost:3000 y nos deplegara la pagina el mensaje "Hola Mundo web!"
+</p>
+<p>
+  Ir al link http://localhost:3000/hola/Luis y nos deplegara la pagina el mensaje "Hola Luis, como estas?" 
+  siendo como opcional el nombre de "Luis" es solo un parametro que estamos leyendo para desplegar el saludo.
+</p>

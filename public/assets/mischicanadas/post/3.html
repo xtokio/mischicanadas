@@ -1,0 +1,51 @@
+<p>
+    NGINX es el servidor web que generalmente use en todos mis proyectos y lo primero 
+    que hago es configurarlo con mi dominio ( o subdominio según sea el caso ).
+</p>
+
+<h3>Paso 1: Debemos crear un archivo donde pondremos la configuracion de nuestro dominio, en este caso es example.com</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo nano /etc/nginx/sites-available/example.com
+        </code>
+    </pre>
+</figure>
+
+<h3>Configuracion de ejemplo</h3>
+<figure class="highlight">
+    <pre class="language-nginx">
+        <code>
+            server { 
+              listen 80;
+              listen [::]:80;
+               root /var/www/example.com/html;
+               index index.html index.htm index.nginx-debian.html;
+
+                server_name example.com www.example.com;
+
+                location / {
+                   try_files $uri $uri/ =404;
+                 }
+             } 
+        </code>
+    </pre>
+</figure>
+
+<h3>Ahora debemos crear un symbolic link de nuestro archivo de configuracion</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+        </code>
+    </pre>
+</figure>
+
+<h3>Ahora solo reinciamos el servidor de NGINX</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo service nginx restart
+        </code>
+    </pre>
+</figure>

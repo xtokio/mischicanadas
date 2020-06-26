@@ -1,0 +1,55 @@
+<p>
+  LEMP Stack es cuando configuramos nuestro servidor e instalamos Linux NGINX MySQL PHP 
+  esa sera la base de nuestro servidor para usarlo en nuestros desarrollos web.
+</p>
+
+<h3>Lo primero que debemos hacer es actualizar nuestro sistema operativo.</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt-get update
+        </code>
+    </pre>
+</figure>
+
+<h3>Instalamos NGINX</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt-get install nginx
+        </code>
+    </pre>
+</figure>
+
+<h3>Habilitamos NGINX en el firewall</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo ufw allow in "Nginx Full"
+        </code>
+    </pre>
+</figure>
+
+<h3>Instalamos MySQL</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt-get install mysql-server 
+          sudo mysql_secure_installation
+        </code>
+    </pre>
+</figure>
+
+<h3>Instalamos PHP</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt-get install php libapache2-mod-php php-mysql
+        </code>
+    </pre>
+</figure>
+
+<p>
+  Con esto nuestro servidor queda configurado con NGINX , MySQL y PHP si nos dirigimos a la IP del servidor 
+  deberiamos de ver la pagina de bienvenida de NGINX.
+</p>
