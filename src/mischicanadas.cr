@@ -64,5 +64,9 @@ module Mischicanadas
     render "src/views/projects.ecr" , "src/layouts/base.ecr"
   end
 
+  get "/profile" do |env|
+    render "src/views/profile.ecr" , "src/layouts/base.ecr"
+  end
+
 end
 Kemal.run(PORT)
