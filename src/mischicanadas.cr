@@ -57,5 +57,12 @@ module Mischicanadas
     render "src/views/post.ecr" , "src/layouts/base.ecr"
   end
 
+  get "/projects" do |env|
+    
+    projects = Controller::Projects.all()
+
+    render "src/views/projects.ecr" , "src/layouts/base.ecr"
+  end
+
 end
 Kemal.run(PORT)
