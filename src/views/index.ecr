@@ -6,14 +6,7 @@
         <p>
             <%= post.description %>
         </p>
-        <a href="/post/<%= post.id %>" class="filter_active display-none">
-            <img data-filename="<%= post.filename %>" src="/assets/mischicanadas/img/logos/<%= post.logo %>" loading="lazy">
-        </a>
         <br>
-        <a href="/post/<%= post.id %>" class="filter_active display-none" data-filename="<%= post.filename %>" data-post="<%= post.id %>">
-            Leer mas <span class="arrow">→</span>
-        </a>
-        <hr class="filter_active display-none">
         </div>
     </div>
 <% end %>

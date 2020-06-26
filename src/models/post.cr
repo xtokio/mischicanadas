@@ -5,7 +5,6 @@ module Model
             field :id, Int32, primary_key: true
             field :title, String
             field :description, String
-            field :logo, String
             field :filename, String
             field :author, String
         end
