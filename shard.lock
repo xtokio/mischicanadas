@@ -1,38 +1,42 @@
-version: 1.0
+version: 2.0
 shards:
+  backtracer:
+    git: https://github.com/sija/backtracer.cr.git
+    version: 1.2.1
+
   crecto:
-    github: xtokio/crecto
-    commit: a8ab7e34cb0b69d4488fce154c0da1bfd9eba318
+    git: https://github.com/xtokio/crecto.git
+    version: 0.11.5+git.commit.805eee2c32833bd2df16070016f6c5fc977ae968
 
   db:
-    github: crystal-lang/crystal-db
-    version: 0.9.0
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.1
 
   dotenv:
-    github: xtokio/dotenv
-    commit: f4d3134e98adf2bad2fde7aaabe9ddbc500dd00b
+    git: https://github.com/xtokio/dotenv.git
+    version: 0.1.0+git.commit.f78b1cdb428e877abd8360aed7bb36676dbd6721
 
   exception_page:
-    github: crystal-loot/exception_page
-    version: 0.1.4
+    git: https://github.com/crystal-loot/exception_page.git
+    version: 0.2.0
 
   kemal:
-    github: kemalcr/kemal
-    commit: a8c0f09b858162bd13c96663febef5527b322a32
+    git: https://github.com/kemalcr/kemal.git
+    version: 1.0.0+git.commit.218be2422172d330feb62c6a8abc7df5402fdb84
 
   kemal-session:
-    github: kemalcr/kemal-session
-    commit: a9d25e5c851c5bab84be51ee2af47c21adbe3726
+    git: https://github.com/kemalcr/kemal-session.git
+    version: 1.0.0+git.commit.2ebaf68ed48da763a9cdd0f8dcbc6347981e115d
 
   kilt:
-    github: jeromegn/kilt
-    version: 0.4.0
+    git: https://github.com/jeromegn/kilt.git
+    version: 0.6.1
 
   radix:
-    github: luislavena/radix
-    version: 0.3.9
+    git: https://github.com/luislavena/radix.git
+    version: 0.4.1
 
   sqlite3:
-    github: crystal-lang/crystal-sqlite3
-    version: 0.16.0
+    git: https://github.com/crystal-lang/crystal-sqlite3.git
+    version: 0.18.0
 
