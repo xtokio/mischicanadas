@@ -2,7 +2,8 @@
 require "dotenv"
 
 # Load ENV variables
-Dotenv.load #("/Users/luis/Desktop/Code/Crystal/apps/eforms/.env")
+Dotenv.load("/var/www/domains/mischicanadas/subdomains/app/mischicanadas/.env")
+# Dotenv.load #("/Users/luis/Desktop/Code/Crystal/apps/eforms/.env")
 PUBLIC_PATH = ENV["PUBLIC_PATH"]
 PORT        = ENV["PORT"].to_i
 
