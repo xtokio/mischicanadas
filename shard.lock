@@ -1,8 +1,18 @@
 version: 2.0
 shards:
+<<<<<<< HEAD
   crecto:
     git: https://github.com/xtokio/crecto.git
     version: 0.11.5
+=======
+  backtracer:
+    git: https://github.com/sija/backtracer.cr.git
+    version: 1.2.1
+
+  crecto:
+    git: https://github.com/xtokio/crecto.git
+    version: 0.11.5+git.commit.805eee2c32833bd2df16070016f6c5fc977ae968
+>>>>>>> b5162648772ef84587698e14be33cf26b7541f5a
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
@@ -14,6 +24,7 @@ shards:
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
+<<<<<<< HEAD
     version: 0.1.5
 
   kemal:
@@ -27,6 +38,21 @@ shards:
   kilt:
     git: https://github.com/jeromegn/kilt.git
     version: 0.4.1
+=======
+    version: 0.2.0
+
+  kemal:
+    git: https://github.com/kemalcr/kemal.git
+    version: 1.0.0+git.commit.218be2422172d330feb62c6a8abc7df5402fdb84
+
+  kemal-session:
+    git: https://github.com/kemalcr/kemal-session.git
+    version: 1.0.0+git.commit.2ebaf68ed48da763a9cdd0f8dcbc6347981e115d
+
+  kilt:
+    git: https://github.com/jeromegn/kilt.git
+    version: 0.6.1
+>>>>>>> b5162648772ef84587698e14be33cf26b7541f5a
 
   radix:
     git: https://github.com/luislavena/radix.git
