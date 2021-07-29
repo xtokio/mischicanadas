@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mis Chicanadas</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/mischicanadas/img/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/mischicanadas/css/docs.css">
+    <link rel="stylesheet" href="/assets/mischicanadas/css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81631455-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-81631455-2');
+    </script>
+
+  </head>
+  <body class="body">
+    <div id="app">
+      <header class="header">              
+          <div class="site-content">
+              <h1 class="site-content__headline"><a href="/"><span class="mis">Mis</span> <span class="chicanadas">Chicanadas</span></a></h1>
+              <a href="/projects" class="menu_bar">Proyectos</a>
+          </div>
+      </header>
+      <div class="container">        
+        <%= content %>
+      </div>
+
+    </div>
+    <script src="/assets/mischicanadas/js/prism.js"></script>
+  </body>
+</html>

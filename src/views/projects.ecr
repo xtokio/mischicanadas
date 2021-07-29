@@ -1,0 +1,23 @@
+<% projects.each do |project| %>
+<div class="posts">
+    <div>
+        <a href="#"><h1><%= project.title %></h1></a>
+        <p class="post_author_date"> 
+            <a href="/profile" class="profile"><%= project.author %></a> &#8226; 
+            <%= project.created_at %> &#8226; 
+            <a href="<%= project.repo %>" class="profile" target="_blank">Codigo</a>
+        </p>
+        <p>
+        <%= project.description %>
+        </p>
+        <a href="<%= project.link %>" target="_blank">
+            <img src="/assets/mischicanadas/img/projects/<%= project.logo %>" class="img_card" loading="lazy"/>
+        </a>
+        <br>
+        <a href="<%= project.link %>" class="read_more" target="_blank">
+            Visitar proyecto <span class="arrow">&#x2192;</span>
+        </a>
+        <hr>
+    </div>
+</div>
+<% end %>

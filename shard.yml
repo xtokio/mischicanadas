@@ -1,0 +1,25 @@
+name: mischicanadas
+version: 0.1.0
+
+authors:
+  - Luis Gomez <xtokio@gmail.com>
+
+dependencies:
+  dotenv:
+    github: xtokio/dotenv
+  kemal:
+    github: kemalcr/kemal
+  kemal-session:
+    github: kemalcr/kemal-session
+  crecto:    
+    github: xtokio/crecto
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+targets:
+  mischicanadas:
+    main: src/mischicanadas.cr
+
+crystal: 1.1.1
+
+license: MIT

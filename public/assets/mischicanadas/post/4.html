@@ -1,0 +1,31 @@
+<p>
+    Con Let's Encrypt podemos habilitar a nuestros dominios con seguridad SSL y asi ofrecer 
+    una comunicacion encryptada entre nuestro servidor y nuestos visitantes..
+</p>
+
+<h3>Agregamos el repositorio de Let's Encrypt</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo add-apt-repository ppa:certbot/certbot
+        </code>
+    </pre>
+</figure>
+
+<h3>Ahora instalamos el Certbot</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt install python-certbot-nginx
+        </code>
+    </pre>
+</figure>
+
+<h3>Por ultimo ejecutamos Certbot con el dominio al cual queramos habilitar SSL</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo certbot --nginx -d example.com -d www.example.com
+        </code>
+    </pre>
+</figure>

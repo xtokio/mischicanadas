@@ -1,0 +1,74 @@
+<p>
+    Crystal es un lenguaje de programacion inspirado en Ruby pero Crystal es un lenguaje compilado
+    asi como lo es C++ por lo que lo hace mucho mas rapido que Ruby.
+</p>
+<h2>Instalacion de Crystal en Ubuntu</h2>
+<br>
+<h3>Agregamos repositorio</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          curl -sSL https://dist.crystal-lang.org/apt/setup.sh | sudo bash
+        </code>
+    </pre>
+</figure>
+
+<h3>Instalamos</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt install crystal
+        </code>
+    </pre>
+</figure>
+
+<h3>Librerias opcionales</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          sudo apt install libssl-dev # for using OpenSSL 
+          sudo apt install libxml2-dev # for using XML 
+          sudo apt install libyaml-dev # for using YAML 
+          sudo apt install libgmp-dev # for using Big numbers 
+          sudo apt install libreadline-dev # for using Readline
+        </code>
+    </pre>
+</figure>
+
+<h2>Hola Mundo!</h2>
+<br>
+<h3>Creamos un archivo y lo nombramos hola.cr</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          nano hola.cr
+        </code>
+    </pre>
+</figure>
+
+<h3>Dentro escribimos el siguiente codigo</h3>
+<figure class="highlight">
+    <pre class="language-ruby">
+        <code>
+          puts "Hola Mundo!"
+        </code>
+    </pre>
+</figure>
+
+<h3>Y lo ejecutamos de la siguiente forma</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          crystal run hola.cr
+        </code>
+    </pre>
+</figure>
+
+<h3>Y en pantalla nos debera aparecer el siguiente mensaje</h3>
+<figure class="highlight">
+    <pre class="language-bash">
+        <code>
+          Hola Mundo!
+        </code>
+    </pre>
+</figure>

@@ -1,0 +1,12 @@
+<% posts.each do |post| %>
+    <div class="posts">
+        <div>
+        <a href="/post/<%= post.id %>" data-filename="<%= post.filename %>" data-post="<%= post.id %>"><h1> <%= post.title %></h1></a>
+        <p class="post_author_date"> <a href="/profile" class="profile"> <%= post.author %></a> • <%= post.created_at %> </p>
+        <p>
+            <%= post.description %>
+        </p>
+        <br>
+        </div>
+    </div>
+<% end %>
