@@ -2,6 +2,6 @@
 /lib/
 /bin/
 /.shards/
-/public/keybase.txt
+public/keybase.txt
 *.dwarf
 *.env
